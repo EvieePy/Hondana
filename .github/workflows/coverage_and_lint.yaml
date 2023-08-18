@@ -71,7 +71,9 @@ jobs:
           DEFAULT_BRANCH: main
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_PYTHON_BLACK: true
-          VALIDATE_PYTHON_ISORT: true
           LINTER_RULES_PATH: /
-          PYTHON_ISORT_CONFIG_FILE: pyproject.toml
           PYTHON_BLACK_CONFIG_FILE: pyproject.toml
+
+      - name: Lint (ruff)
+        run: |
+            ruff check --format=github .
