@@ -406,7 +406,9 @@ class Manga:
             return
 
         if "attributes" in self._cover_relationship:
-            self.__cover = Cover(self._http, self._cover_relationship)
+            cover = Cover(self._http, self._cover_relationship)
+            cover._manga_relationship = self._data  # type: ignore # protected access is okay here.
+            self.__cover = cover
             return self.__cover
 
     @cover.setter
