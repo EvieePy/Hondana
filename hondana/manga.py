@@ -31,11 +31,30 @@ from .artist import Artist
 from .author import Author
 from .collections import ChapterFeed, MangaRelationCollection
 from .cover import Cover
-from .enums import ContentRating, MangaRelationType, MangaState, MangaStatus, PublicationDemographic, ReadingStatus
+from .enums import (
+    ContentRating,
+    MangaRelationType,
+    MangaState,
+    MangaStatus,
+    PublicationDemographic,
+    ReadingStatus,
+)
 from .forums import MangaComments
-from .query import ArtistIncludes, AuthorIncludes, ChapterIncludes, CoverIncludes, FeedOrderQuery, MangaIncludes
+from .query import (
+    ArtistIncludes,
+    AuthorIncludes,
+    ChapterIncludes,
+    CoverIncludes,
+    FeedOrderQuery,
+    MangaIncludes,
+)
 from .tags import Tag
-from .utils import MISSING, RelationshipResolver, cached_slot_property, require_authentication
+from .utils import (
+    MISSING,
+    RelationshipResolver,
+    cached_slot_property,
+    require_authentication,
+)
 
 if TYPE_CHECKING:
     from .http import HTTPClient
